@@ -123,9 +123,9 @@ s: String = example
 Include the following dependency in your SBT build
 
 ```scala
-resolvers += Resolver.bintrayRepo("hmrc", "releases")
+resolvers += s"castleone-github" at s"https://maven.pkg.github.com/$githubOwner",
 
-libraryDependencies += "uk.gov.hmrc" %% "emailaddress" % "<INSERT VERSION>"
+libraryDependencies += "castleone" %% "emailaddress" % "3.1.0"
 ```
 
 ## License ##
