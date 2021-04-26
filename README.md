@@ -8,6 +8,10 @@ Updated dependencies:
 - Removed : Scala 2.11 and 2.12 ( because of libs incompatibilities )
 - Removed : dependency to "SbtAutoBuildPlugin" (specific sbt template from https://dl.bintray.com/hmrc/sbt-plugin-releases)
 
+**Update:** Forked a fork ([here](https://github.com/samihus/emailaddress)) and made the following changes
+- Removed Bintray plugins
+- Support for Scala 2.12 and 2.13
+  - Tests pass using both versions
 
 emailaddress
 ==================
