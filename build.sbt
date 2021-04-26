@@ -1,10 +1,15 @@
-val appName = "emailaddress"
 
-lazy val emailaddress = Project(appName, file("."))
-  .enablePlugins(/*SbtAutoBuildPlugin, */SbtGitVersioning, SbtArtifactory)
-  .settings(majorVersion := 3)
-  .settings(makePublicallyAvailableOnBintray := true)
+lazy val scala213 = "2.13.5"
+lazy val scala212 = "2.12.13"
+
+lazy val supportedScalaVersions = List(scala213, scala212)
+
+ThisBuild / scalaVersion := scala213
+
+lazy val emailaddress = (project in file("."))
   .settings(
+    name := "emailaddress",
+    crossScalaVersions := supportedScalaVersions,
     scalacOptions ++= Seq(
       "-feature",
       "-language:implicitConversions"
@@ -17,6 +22,3 @@ lazy val emailaddress = Project(appName, file("."))
       "org.scalatestplus" %% "scalacheck-1-15" % "3.2.7.0" % "test"
     )
   )
-
-scalaVersion := "2.13.5"
-
