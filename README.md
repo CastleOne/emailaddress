@@ -123,7 +123,7 @@ s: String = example
 Include the following dependency in your SBT build
 
 ```scala
-resolvers += s"castleone-github" at s"https://maven.pkg.github.com/CastleOne"
+resolvers += s"castleone-github" at s"https://maven.pkg.github.com/CastleOne/emailaddress"
 
 libraryDependencies += "castleone" %% "emailaddress" % "3.1.0"
 ```
